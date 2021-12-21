@@ -135,6 +135,9 @@ button{
 	.dp-flex{
 		flex-direction: column;
 	}
+	.container-sm{
+		width:95%!important;
+	}
 }
 
 .hidden{
