@@ -77,7 +77,7 @@ $(document ).ready(function(){
         message => alert(message)
       );
     }else{
-      alert('pengisian masih salah harap diulangi lagi :)');
+      alert('The field must be complete!');
     }
  
     e.preventDefault();

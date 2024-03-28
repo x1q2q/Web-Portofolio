@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" value="light dark" />
+	<meta name="supported-color-schemes" content="light dark" />
 	<title>Arafik Nur Fadliansah</title>
 	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -16,22 +18,42 @@
             <h1>ArafikNF</h1>
         </div>
         <label for="toggle" class="toggle hidden right">
-            <svg width="35" height="25">
-                <path d="M0 5, 35 5" stroke-width="4" stroke="#4b4a62"/>
-                <path d="M0 14, 35 14" stroke-width="4" stroke="#4b4a62"/>
-                <path d="M0 23, 35 23" stroke-width="4" stroke="#4b4a62"/>
+            <svg width="35" height="25" class="svg-toggle">
+                <path d="M0 5, 35 5" stroke-width="4"></path>
+                <path d="M0 14, 35 14" stroke-width="4"></path>
+                <path d="M0 23, 35 23" stroke-width="4"></path>
             </svg>
         </label>
         <div class="clear-r"></div>
         <input type="checkbox" id="toggle" class="hidden">
-
         <ul class="nav-menu dp-flex right">
             <li><a class="menu-scroll" href="#jf-home">Home</a></li>
-						<li><a class="menu-scroll" href="#jf-tentang">About</a></li>
-						<li><a class="menu-scroll" href="#jf-skill">Skill</span></a></li>
-						<li><a class="menu-scroll" href="#jf-pengalaman">Experience</span></a></li>
-						<li><a class="menu-scroll" href="#jf-prestasi">Achievment</span></a></li>
-						<li><a class="menu-scroll" href="#jf-projek">Project</span></a></li>
+			<li><a class="menu-scroll" href="#jf-tentang">About</a></li>
+			<li><a class="menu-scroll" href="#jf-skill">Skill</a></li>
+			<li><a class="menu-scroll" href="#jf-pengalaman">Experience</a></li>
+			<li><a class="menu-scroll" href="#jf-prestasi">Achievment</a></li>
+			<li><a class="menu-scroll" href="#jf-projek">Project</a></li>
+			<li>
+				<a class="dp-block toggle-color-scheme" href="#">
+					<label for="light-mode" class="svg-color-scheme">
+						<input name="color-scheme" type="radio" value="light" id="light-mode" checked>
+						<svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#e4e4e4">
+							<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+							<g id="SVGRepo_iconCarrier"> <path d="M21.0672 11.8568L20.4253 11.469L21.0672 11.8568ZM12.1432 2.93276L11.7553 2.29085V2.29085L12.1432 2.93276ZM21.25 12C21.25 17.1086 17.1086 21.25 12 21.25V22.75C17.9371 22.75 22.75 17.9371 22.75 12H21.25ZM12 21.25C6.89137 21.25 2.75 17.1086 2.75 12H1.25C1.25 17.9371 6.06294 22.75 12 22.75V21.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75V1.25C6.06294 1.25 1.25 6.06294 1.25 12H2.75ZM15.5 14.25C12.3244 14.25 9.75 11.6756 9.75 8.5H8.25C8.25 12.5041 11.4959 15.75 15.5 15.75V14.25ZM20.4253 11.469C19.4172 13.1373 17.5882 14.25 15.5 14.25V15.75C18.1349 15.75 20.4407 14.3439 21.7092 12.2447L20.4253 11.469ZM9.75 8.5C9.75 6.41182 10.8627 4.5828 12.531 3.57467L11.7553 2.29085C9.65609 3.5593 8.25 5.86509 8.25 8.5H9.75ZM12 2.75C11.9115 2.75 11.8077 2.71008 11.7324 2.63168C11.6686 2.56527 11.6538 2.50244 11.6503 2.47703C11.6461 2.44587 11.6482 2.35557 11.7553 2.29085L12.531 3.57467C13.0342 3.27065 13.196 2.71398 13.1368 2.27627C13.0754 1.82126 12.7166 1.25 12 1.25V2.75ZM21.7092 12.2447C21.6444 12.3518 21.5541 12.3539 21.523 12.3497C21.4976 12.3462 21.4347 12.3314 21.3683 12.2676C21.2899 12.1923 21.25 12.0885 21.25 12H22.75C22.75 11.2834 22.1787 10.9246 21.7237 10.8632C21.286 10.804 20.7293 10.9658 20.4253 11.469L21.7092 12.2447Z" fill="#e4e4e4"/> </g>
+						</svg>
+					</label>
+						<label for="dark-mode" class="svg-color-scheme">
+						<input name="color-scheme" type="radio" value="dark" id="dark-mode"> 
+						<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#4b4a62" stroke="#4b4a62">
+							<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+							<g id="SVGRepo_iconCarrier"> <g> <circle fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" cx="32.003" cy="32.005" r="16.001"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M12.001,31.997c0-2.211-1.789-4-4-4H4c-2.211,0-4,1.789-4,4 s1.789,4,4,4h4C10.212,35.997,12.001,34.208,12.001,31.997z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M12.204,46.139l-2.832,2.833c-1.563,1.562-1.563,4.094,0,5.656 c1.562,1.562,4.094,1.562,5.657,0l2.833-2.832c1.562-1.562,1.562-4.095,0-5.657C16.298,44.576,13.767,44.576,12.204,46.139z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M32.003,51.999c-2.211,0-4,1.789-4,4V60c0,2.211,1.789,4,4,4 s4-1.789,4-4l-0.004-4.001C36.003,53.788,34.21,51.999,32.003,51.999z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M51.798,46.143c-1.559-1.566-4.091-1.566-5.653-0.004 s-1.562,4.095,0,5.657l2.829,2.828c1.562,1.57,4.094,1.562,5.656,0s1.566-4.09,0-5.656L51.798,46.143z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M60.006,27.997l-4.009,0.008 c-2.203-0.008-3.992,1.781-3.992,3.992c-0.008,2.211,1.789,4,3.992,4h4.001c2.219,0.008,4-1.789,4-4 C64.002,29.79,62.217,27.997,60.006,27.997z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M51.798,17.859l2.828-2.829c1.574-1.566,1.562-4.094,0-5.657 c-1.559-1.567-4.09-1.567-5.652-0.004l-2.829,2.836c-1.562,1.555-1.562,4.086,0,5.649C47.699,19.426,50.239,19.418,51.798,17.859z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M32.003,11.995c2.207,0.016,4-1.789,4-3.992v-4 c0-2.219-1.789-4-4-4c-2.211-0.008-4,1.781-4,3.993l0.008,4.008C28.003,10.206,29.792,11.995,32.003,11.995z"/> <path fill-rule="evenodd" clip-rule="evenodd" fill="#4b4a62" d="M12.212,17.855c1.555,1.562,4.079,1.562,5.646-0.004 c1.574-1.551,1.566-4.09,0.008-5.649l-2.829-2.828c-1.57-1.571-4.094-1.559-5.657,0c-1.575,1.559-1.575,4.09-0.012,5.653 L12.212,17.855z"/> </g> </g>
+						</svg>
+
+					</label>
+				</a>
+			</li>
         </ul>
     </div>
 </div>
@@ -48,7 +70,7 @@
 			<a target="_blank" href="https://medium.com/@arafiknurf"><i class="fab fa-medium"></i></a>
 		</div>
 		<a class="menu-scroll btn-def rnd-40 black-p lg-btn hv-rgba" href="#jf-hubungi">Contact Me</a>
-		<a href="#jf-tentang" class="menu-scroll dp-block pd-30">
+		<a href="#jf-tentang" class="text-href menu-scroll dp-block pd-30">
 			Slide down
 			<i class="dp-block fa fa-chevron-down fa-2x"></i>
 		</a>
@@ -62,7 +84,7 @@
 		</div>
 		<div id="box-about-me" class="dp-flex">
 			<div class="fl-1 center-center">
-				<img class="img-res" style="height: 200px;" src="assets/images/profil.png" alt="">
+				<img class="img-res" style="height: 350px;" src="assets/images/ava1.png" alt="">
 			</div>
 			<br/>
 			<div class="fl-2 center-center" style="width: 100%;">
@@ -88,11 +110,11 @@
 							</tr>
 							<tr>
 								<td><b>Linkedin</b></td>
-								<td><a target="_blank" href="https://www.linkedin.com/in/arafik-nur-fadliansah/">linkedin/arafik-nur-fadliansah</a></td>
+								<td><a class="text-href" target="_blank" href="https://www.linkedin.com/in/arafik-nur-fadliansah/">linkedin/arafik-nur-fadliansah</a></td>
 							</tr>
 							<tr>
 								<td><b>Blog</b></td>
-								<td><a target="_blank" href="https://medium.com/@arafiknurf/">medium/@arafiknurf</a></td>
+								<td><a class="text-href" target="_blank" href="https://medium.com/@arafiknurf/">medium/@arafiknurf</a></td>
 							</tr>
 						</table>
 						<br/>
@@ -112,7 +134,7 @@
 		</div>
 		<div id="box-skwil" class="dp-flex">
 			<div class="fl-1 pd-10">
-				<div class="box-main black-h hv-rgba pd-30  shd rnd-20">
+				<div class="box-main hv-rgba pd-30  shd rnd-20">
 					<img class="img-res pd-30" src="assets/images/app.png" alt="">
 					<h2>Mobile Apps Developer</h2>
 					<p>Experienced as Mobile Apps Developer in previous work with Ionic & have several project to build apps with Flutter framework Since in college until now.</p>
@@ -120,7 +142,7 @@
 			</div>
 
 			<div class="fl-1 pd-10">
-				<div class="box-main black-h hv-rgba pd-30 shd rnd-20">
+				<div class="box-main hv-rgba pd-30 shd rnd-20">
 					<img class="img-res pd-30" src="assets/images/web.png" alt="">
 					<h2>Web Developer</h2>
 					<p>Understanding web development process using HTML5, CSS3 & JavaScript as Frontend. Use PHP Framework such as Codeigniter & Laravel as Backend System.</p>
@@ -128,9 +150,9 @@
 			</div>
 
 			<div class="fl-1 pd-10">
-				<div class="box-main black-h hv-rgba pd-30 shd rnd-20">
+				<div class="box-main hv-rgba pd-30 shd rnd-20">
 					<img class="img-res pd-30" src="assets/images/work.png" alt="">
-					<h2>Agile SDLC with SCRUM</h2>
+					<h2>Agile SDLC SCRUM</h2>
 					<p>Having an experience employeed with a few companies. 
 						Well-versed in utilizing the Scrum methodology, ensuring streamlined & efficient project management. </p>
 				</div>
@@ -155,9 +177,9 @@
 				</div>
 				<div class="dp-block">
 					<i class="fa fa-university"></i>
-					<p class="thn-range">August 2019 - Sekarang</p>
-					<h2>Sebelas Maret University</h2>
-					<p>Entered to Sebelas Maret University and majoring in IT Education.</p>
+					<p class="thn-range">August 2019 - January 2024</p>
+					<h2>Universitas Sebelas Maret</h2>
+					<p>Enrolled in Universitas Sebelas Maret and majoring in IT Education.</p>
 				</div>
 				<div class="dp-block">
 					<i class="fa fa-users"></i>
@@ -171,22 +193,22 @@
 				<div class="dp-block">
 					<i class="fa fa-users"></i>
 					<p class="thn-range">2018 - 2019</p>
-					<h2>PT Nocola IOT Solution</h2>
+					<h2>Fulltime - PT Nocola IOT Solution</h2>
 					<p>After graduating, worked at PT Nocoloa IOT Solution
 						for one year and positioned as a programmer (Mobile Apps Developer).</p>
 				</div>
 				<div class="dp-block">
 					<i class="fa fa-users"></i>
 					<p class="thn-range">2020 - 2021</p>
-					<h2>Semartech Part-time web developer</h2>
+					<h2>Parttime - Semartech</h2>
 					<p>In college, I also joined PTIK Software House to collaborate with Semartech as a part-time web developer, 
 						specializing in crafting dynamic web profiles and applications using Laravel</p>
 				</div>
 				<div class="dp-block">
 					<i class="fa fa-users"></i>
 					<p class="thn-range">February 2022 - May 2022</p>
-					<h2>Internship at PT Gamatechno Yogyakarta</h2>
-					<p>Got experience through internships with PT Gamatechno as a Laravel Developer. Joined the team to develop systems with Agile development SDLC using Scrum methodology.</p>
+					<h2>Internship - PT Gamatechno</h2>
+					<p>Got experience through internships with PT Gamatechno Yogyakarta as a Laravel Developer. Joined the team to develop systems with Agile development SDLC using Scrum methodology.</p>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -447,10 +469,11 @@
 <script type="text/javascript" src="assets/js/script.js"></script>
 <div id="jf-footer">
 	<div class="footer-bottom shd pd-10">
-		<p class="f-title">COPYRIGHT &copy; 2023 All Right Reserved | By Arafik Nur Fadliansah</p>
+		<p class="f-title">Made By Love (2024) - &copy; Arafik Nur Fadliansah</p>
 	</div>
 </div>
 </body>
 </html>
 <!-- arafik nurf (rafiknurf) - 19/12/2021 -->
 <!-- updated on nov, 2023 -->
+<!-- updated on march, 2024 -->

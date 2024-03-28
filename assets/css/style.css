@@ -5,8 +5,47 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+:root {
+	&:has(input[name="color-scheme"][value="light"]:checked) {
+		color-scheme: light;
+	}
+	&:has(input[name="color-scheme"][value="dark"]:checked) {
+		color-scheme: dark;
+	}
+	color-scheme: light dark;
+	--primary-color: light-dark(#4b4a62,#e4e4e4);
+	--primary-background: light-dark(#f9f9ff, #4b4a62);
+	--box-background:light-dark(#fff,#333);
+	--bg-header:light-dark(rgba(0,0,0,0.05),rgba(255,255,255,0.1));
+	--highlight-color: light-dark(hotpink, lime);
+	--border-title:light-dark(rgba(22,140,140,1),rgba(255,255,255,1));
+	--header-background: light-dark(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+	--box-inset:light-dark(rgba(0,0,0,0.18),rgba(255,255,255,0.18));
+	transition: color .4s, background-color .5s;
+  }
 body{
 	font-family: sans-serif;
+	background-color:var(--primary-background);
+	color:var(--primary-color);
+}
+input[type="radio"]{
+	opacity: 0;
+}
+label.svg-color-scheme{
+	cursor: pointer;
+}
+input[name="color-scheme"]:checked ~ svg{
+	/* display: none; */
+	border:1px solid var(--primary-background);
+	stroke:var(--primary-background);
+}
+.toggle-color-scheme svg{
+	border:1px solid var(--primary-color);
+	border-radius: 50%;
+	padding:5px;
+}
+#jf-nav svg.svg-toggle path{
+	stroke:var(--primary-color);
 }
 @font-face{
 	font-family: 'staticless';
@@ -56,9 +95,9 @@ button{
 }
 .box-main{
 	font-family: 'robotoLight';
-	background: #fff;
+	background: var(--box-background);
 	display: block;
-	color: #404040;
+	color: var(--primary-color);
 	font-weight: lighter;
 	border-radius: 1px;
 	padding: 10px;
@@ -111,7 +150,6 @@ button{
 	position: fixed;
 	padding: 10px !important;
 	height: 65px !important;
-	background-color: #f9f9ff !important;
 }
 .dp-flex{
 	display: flex;
@@ -152,7 +190,7 @@ ul.menu-default{
 	margin-top: 4px;
 	display: block;
 	padding: 10px;
-	color: #000;
+	color: var(--primary-color);
 	transition:all .3s ease-out;
 	font-family: 'robotoLight';
 }
@@ -181,7 +219,7 @@ ul.menu-default{
 	cursor: pointer;
 	padding:10px 18px;
 	background: gray;
-	color: #fff;
+	color: var(--primary-color);
 	border-radius: 2px;
 	transition: .3s ease-in-out;
 	display:inline-block;
@@ -227,13 +265,10 @@ ul.menu-default{
 		transform: translateY(15px);
 	}
 }
-body{
-	background: #e6e6e6;
-}
 #jf-nav{
 	z-index: 2;
 	padding: 20px 0;
-	background: #fff;
+	background: var(--primary-background);
 	height: 85px;
 	transition: all .3s ease-in-out;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
@@ -242,7 +277,7 @@ body{
 .toggle{
 	padding: 5px;
 	border-radius: 6px;
-	border:2px solid #4b4a62;
+	border:2px solid var(--primary-color);
 	cursor: pointer;
 }
 .toggle:hover{
@@ -252,7 +287,10 @@ body{
 	font-family: 'staticless';
 	font-size: 40px;
 	font-weight: lighter;
+	letter-spacing: 2px;
 	color: rgba(22,140,140,1);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color:var(--border-title);
 }
 .nav-menu{
 	z-index: 99;
@@ -271,7 +309,7 @@ body{
 	display: block;
 	margin:0 8px;
 	transition:height .3s ease-in-out;
-	color: #4b4a62;
+	color: var(--primary-color);
 }
 .nav-menu li a:hover{
 	color: rgba(22,160,140,1);
@@ -283,7 +321,7 @@ body{
 }
 .nav-menu ul li a{
 	padding: 10px 30px;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid var(--primary-color);
 	color: #fff;
 }
 .nav-menu ul li a:hover{
@@ -306,7 +344,7 @@ body{
 	.nav-menu ul{
 		position: static;
 		display: none;
-		background: #4b4a62;
+		background: var(--primary-background);
 	}
 	.nav-menu ul li a{
 		animation: none;
@@ -322,21 +360,21 @@ body{
 	.nav-menu li a{
 		padding: 10px 35px;
 		animation: slideDown .7s ease-out;
-		background: #fff;
+		background: var(--primary-background);
 		margin: 0;
-		border-top: 1px solid silver;
-		color: #4b4a62;
+		border-top: 1px solid var(--primary-color);
+		color: var(--primary-color);
 	}
 	.nav-menu li a:hover{
-		background: #f9f9ff;
-		color: #4b4a62 !important;
+		background: var(--primary-color);
+		color: var(--primary-background);
 	}
 }
 
 
 .header-text{
 	padding:18px;
-	color: rgba(0,0,0,0.6);
+	color: var(--primary-color);
 }
 .header-text h2{
 	text-decoration: underline;
@@ -408,8 +446,9 @@ button, input[type="submit"]{
 	text-align: center;
 }
 .footer-bottom{
-	background: #fff;
-	color: rgba(64,64,64,1);
+	background: var(--primary-background);
+	border-top:1px solid var(--primary-color);
+	color: var(--primary-color);
 	font-size: 22px;
 	font-weight:lighter;
 	font-family: 'staticless';
@@ -418,9 +457,8 @@ button, input[type="submit"]{
 .section-full{
 	height: auto;
 	padding: 60px 0px 40px 0px;
-	background-color:#f9f9ff;
 	display: flex;
-	box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.18);
+	box-shadow: inset 0px 1px 1px 0px var(--box-inset);
 }
 .section-full .container-sm > .dp-flex{
 	padding: 40px 0;
@@ -439,9 +477,10 @@ button, input[type="submit"]{
 	height: 45px;
 	bottom: 10px;
 	left:-15px;
+	background: var(--bg-header);
 }
 .title-section h1{
-	color:#4b4a62;
+	color:var(--primary-color);
 	font-weight: bolder;
 	letter-spacing: 2px;
 	font-family: 'oswald';
@@ -492,7 +531,7 @@ button, input[type="submit"]{
 	}
 }
 #jf-home.section-full{
-	background:url('../images/bg-pattern.svg');
+	background:linear-gradient( var(--header-background) 100%, rgba(255,255,255,1)100%), url('../images/bg-pattern.svg');
 	background-attachment: fixed;
 }
 #jf-home img{
@@ -505,7 +544,7 @@ button, input[type="submit"]{
 #jf-home .social-menu i{
 	margin: 0 5px;
 	font-size: 38px !important;
-	color:rgba(44,62,88,1);
+	color:var(--primary-color);
 }
 #jf-home .social-menu a:hover{
 	animation: fadein .5s ease-in-out;
@@ -517,6 +556,9 @@ button, input[type="submit"]{
 #jf-home .social-menu ~ a.dp-block i{
 	color:rgba(22,140,140,1);
 	animation: goyang 1.2s ease-in-out infinite;
+}
+.text-href{
+	color:var(--primary-color);
 }
 .rnd-40{
 	border-radius: 40px !important;
@@ -585,7 +627,7 @@ button, input[type="submit"]{
 #box-contact.dp-flex h2{
 	font-family: 'staticless';
 	font-weight: lighter;
-	color:#404040;
+	color:var(--primary-color);
 }
 #box-contact .form-data input,textarea{
 	background:#fff!important;
@@ -655,7 +697,7 @@ button, input[type="submit"]{
 #box-galeri .dp-flex .box-main{
 	padding: 0px !important;
 	position: relative;
-	border:5px solid rgba(22,140,140,1)	!important;
+	border:5px solid var(--border-title);
 }
 #box-galeri .dp-flex .box-main .caption{
 	background: rgba(0,0,0,0.8);
