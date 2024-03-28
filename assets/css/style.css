@@ -35,7 +35,7 @@ label.svg-color-scheme{
 	cursor: pointer;
 }
 input[name="color-scheme"]:checked ~ svg{
-	/* display: none; */
+	display: none;
 	border:1px solid var(--primary-background);
 	stroke:var(--primary-background);
 }
@@ -44,6 +44,11 @@ input[name="color-scheme"]:checked ~ svg{
 	border-radius: 50%;
 	padding:5px;
 }
+/* custom for not moving */
+label[for="dark-mode"] svg{ 
+	/* margin-right:17px; */
+}
+
 #jf-nav svg.svg-toggle path{
 	stroke:var(--primary-color);
 }
@@ -368,6 +373,13 @@ ul.menu-default{
 	.nav-menu li a:hover{
 		background: var(--primary-color);
 		color: var(--primary-background);
+	}
+	.nav-menu li a.toggle-color-scheme:hover label svg{
+		border:1px solid var(--primary-background);
+		stroke:var(--primary-background);
+	}
+	label[for="dark-mode"] svg{
+		margin-left:-17px;
 	}
 }
 
